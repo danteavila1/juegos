@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Box</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> 
+</head>
+<body>
+    <nav>
+        <img src="img/logo_transparent.png" alt="Blue box Logo">
+        <ul>
+            <li><a href="#">MY LIST</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li class="dropdown">
+                <a href="#">SIGN UP ↓</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">LOG IN</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="slider">
+
+        <div class="mySlider fade" style="display: block;">
+            <div class="sliderText">
+                <h1>HALF-LIFE 2</h1>
+                <p>
+                    The saga that marked a before and after in the history of FPS<br>Subscribe to my channel </p>
+            </div>
+            <img src="img/cards/hl2.jpg" alt="half life 2 wallpaper">
+        </div>     
+
+        <div class="mySlider fade">
+            <div class="sliderText">
+                <h1>HELLDIVERS 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita mollitia sint placeat ipsum ipsam harum excepturi, beatae laboriosam quidem iste rem ducimus nemo.</p>
+            </div>
+            <img src="img/cards/helldivers.jpeg" alt="HELLDIVERS 2">
+        </div>
+
+        <div class="mySlider fade">
+            <div class="sliderText">
+                <h1>BATTLEFIELD 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita mollitia sint placeat ipsum ipsam harum excepturi, beatae laboriosam quidem iste rem ducimus nemo.</p>
+            </div>
+            <img src="img/cards/bf1.jpg" alt="BATTLEFIELD 1">
+        </div>
+
+        <div class="mySlider fade">
+            <div class="sliderText">
+                <h1>WORLD OF WARCRAFT</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita mollitia sint placeat ipsum ipsam harum excepturi, beatae laboriosam quidem iste rem ducimus nemo.</p>
+            </div>
+            <img src="img/cards/wow.jpg" alt="WORLD OF WARCRAFT">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dotsBox">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+    
+    <div class="divider">ABOUT</div>
+
+    <section class="about">
+        <div class="aboutText">
+            <h1>WHAT IS BLUE BOX?</h1>
+            <br>
+            <p>Welcome to Blue Box, your ultimate destination for discovering and exploring the world of video games. Whether you're a seasoned gamer or just starting your journey, Blue Box is designed to help you find new and exciting games tailored to your interests.</p><br>
+
+            <p>Create an account and dive into our extensive library, where you can search for games, scroll through curated lists, and uncover hidden gems. Found a game that piques your interest? Save it to your personal wish list and keep track of all the titles you want to play.</p><br>
+                
+            <p>At Blue Box, we're passionate about gaming and committed to bringing you a seamless and enjoyable experience. Join our community today and start building your collection of must-play games!</p><br>
+        </div>
+        <img src="img/gamers.png" alt="half life 2 wallpaper">
+    </section>
+
+    <div class="divider">LATEST GAMES</div>
+
+    <section class="cardSlider">
+        <div class="wrapper"> 
+            <i id="left" class="fa-solid  fas fa-angle-left"></i> 
+            <ul class="carousel"> 
+                <li class="card"> 
+                    <div class="img"><img src= "img/cards/hl2.jpg" alt="Half-Life 2" draggable="false"> </div> 
+                    <h2> 
+                        Half-Life 2
+                    </h2> 
+                    <span>Singleplayer FPS</span> 
+                </li> 
+                <li class="card"> 
+                    <div class="img"><img src= "img/cards/cs2.png" 
+                                        alt="Couter-Strike 2" draggable="false"> </div> 
+                    <h2>Couter-Strike 2</h2> 
+                    <span>Multiplayer FPS</span> 
+                </li>
+                <li class="card"> 
+                    <div class="img"><img src= "img/cards/helldivers.jpeg" alt="Helldivers 2" draggable="false"> </div> 
+                    <h2>Helldivers 2</h2> 
+                    <span>COOP</span> 
+                </li> 
+                <li class="card"> 
+                    <div class="img"><img src= "img/cards/wow.jpg" alt="World of warcraft" draggable="false"> </div> 
+                    <h2>World Of Warcraft</h2> 
+                    <span>MMORPG</span> 
+                </li> 
+                <li class="card"> 
+                    <div class="img"><img src= "img/cards/genshin.jpg" alt="Genshin Impact" draggable="false"> </div> 
+                    <h2>Genshin Impact</h2> 
+                    <span>ARPG Gacha</span> 
+                </li> 
+                <li class="card"> 
+                    <div class="img"><img src= "img/cards/tf2.jpg" alt="Team Fortress 2" draggable="false"> </div> 
+                    <h2>Team Fortress 2</h2> 
+                    <span>Multiplayer FPS</span>
+                </li> 
+            </ul> 
+            <i id="right" class="fa-solid fas fa-angle-right"></i> 
+        </div>
+    </section>
+
+    <footer class="footer">
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Portfolio</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2024 Dante Avila | All Rights Reserved</p>
+      </footer>
+      
+
+</body>
+
+</html>
