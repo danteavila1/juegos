@@ -13,15 +13,17 @@
 </head>
 <body>
     <nav>
+        <a href="index.html">
         <img src="img/logo_transparent.png" alt="Blue box Logo">
+        </a>
         <ul>
-            <li><a href="myList.html">MY LIST</a></li>
-            <li><a href="explore.html">EXPLORE</a></li>
+            <li><a href="/myList.html">MY LIST</a></li>
+            <li><a href="/explore.html">EXPLORE</a></li>
             <li><a href="#">NEWS</a></li>
             <li class="dropdown">
-                <a href="#">SIGN UP ↓</a>
+                <a href="/LogIn/LogIn.html">LOG IN ↓</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">LOG IN</a></li>
+                    <li><a href="/singUp/signUp.html">SIGN UP</a></li>
                 </ul>
             </li>
         </ul>
@@ -29,7 +31,7 @@
 
     <section class="slider">
 
-        <div class="mySlider fade" style="display: block;">
+        <div class="mySlider fade">
             <div class="sliderText">
                 <h1>HALF-LIFE 2</h1>
                 <p>
@@ -81,12 +83,89 @@
             <br>
             <p>Welcome to Blue Box, your ultimate destination for discovering and exploring the world of video games. Whether you're a seasoned gamer or just starting your journey, Blue Box is designed to help you find new and exciting games tailored to your interests.</p><br>
 
-            <p>Create an account and dive into our extensive library, where you can search for games, scroll through curated lists, and uncover hidden gems. Found a game that piques your interest? Save it to your personal wish list and keep track of all the titles you want to play.</p><br>
+            <p>Create an account and dive into our <a href="/explore.html">extensive library</a>, where you can search for games, scroll through curated lists, and uncover hidden gems. Found a game that piques your interest? Save it to your personal wish list and keep track of all the titles you want to play.</p><br>
                 
             <p>At Blue Box, we're passionate about gaming and committed to bringing you a seamless and enjoyable experience. Join our community today and start building your collection of must-play games!</p><br>
+
+            <a href="/singUp/signUp.html"><button>JOIN US</button></a>
         </div>
         <img src="img/gamers.png" alt="half life 2 wallpaper">
     </section>
+
+    <div class="divider">NEWS</div>
+
+    <div class="newsSectionContainer">
+        <div class="newsSection2">
+            <img src="/img/news/steamNews.jpg" alt="">
+            <h3 class="card__title">This Year's Steam Summer Sale Includes Some Of The Biggest Deals Ever
+            </h3>
+            <p class="card__content">Do you smell that? That's the smell of millions of credit cards around the world melting as gamers empty their bank accounts buying up cheap games during this year's Steam Summer Sale. And this time around, Valve is offering up some even bigger than usual deals on some great games.</p>
+            <div class="card__date">
+                July 1, 2024
+            </div>
+            <div class="card__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                    <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="newsSectionContainer2">
+            <div class="newsSection">
+                <img src="/img/news/olympicNews.jpg" alt="">
+                <h3 class="card__title">Olympic Athlete Keeps Bringing Yu-Gi-Oh Cards To His Races—And Winning
+                </h3>
+                <div class="card__date">
+                    June 25, 2024
+                </div>
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="newsSection">
+                <img src="/img/news/hammerNews.jpg" alt="">
+                <h3 class="card__title">Gamer Flies Across Country To Attack MMO Rival With A Hammer
+                </h3>
+                <div class="card__date">
+                    April 24, 2022
+                </div>
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="newsSection">
+                <img src="/img/news/overwatchNews.jpg" alt="">
+                <h3 class="card__title">Overwatch 2 Devs Agree: Tanks Are Miserable To Play Right Now
+                </h3>
+                <div class="card__date">
+                    April 28, 2022
+                </div>
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="newsSection">
+                <img src="/img/news/eldenRingNews.jpg" alt="">
+                <h3 class="card__title">Everything We Know About Elden Ring's Shadow Of The Erdtree DLC
+                </h3>
+                <div class="card__date">
+                    April 27, 2022
+                </div>
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="divider">LATEST GAMES</div>
 
@@ -151,7 +230,7 @@
           <li class="menu__item"><a class="menu__link" href="#">About</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Portfolio</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+          <li class="menu__item"><a class="menu__link" href="contactUs/contactUs.html">Contact</a></li>
     
         </ul>
         <p>&copy;2024 Dante Avila | All Rights Reserved</p>

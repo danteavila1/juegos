@@ -71,6 +71,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .dropdown-menu li {
     display: block;
+    right: 14px;
 }
 
 .dropdown-menu li a {
@@ -98,6 +99,10 @@ nav ul li.dropdown:hover .dropdown-menu {
     height: 100vh;
     display: none;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .mySlider img{
@@ -129,10 +134,10 @@ nav ul li.dropdown:hover .dropdown-menu {
     position: absolute;
     color: #fff;
     letter-spacing: 2px;
-    line-height: 35px;
     max-width: 450px;
+    left: 50%; /* Change this line */
+    transform: translateX(-50%); /* Change this line */
     top: 35%;
-    left: 40%;
     z-index: 1;
     text-shadow: 2px 2px 2px black;
 }
@@ -141,12 +146,15 @@ nav ul li.dropdown:hover .dropdown-menu {
     color:#0d7485;
     font-weight: 900;
     font-size: 50px;
+    line-height: 40px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .sliderText p{
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 35px;
 }
 
 .prev, .next {
@@ -171,8 +179,9 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .dotsBox {
     position: absolute;
-    left: 45%;
-    transform: translate(-50);
+    left: 50%; /* Change this line */
+    transform: translateX(-50%); /* Change this line */
+
     bottom: 20px;
     cursor: pointer;
     display: flex;
@@ -225,10 +234,12 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .divider {
     color: #68c081;
-    font-size: 4vh;
-    font-weight: 300;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
-    margin-top: 1em;
+    font-size: 7vh;
+    font-weight: 600;
+    letter-spacing: 12px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +249,7 @@ nav ul li.dropdown:hover .dropdown-menu {
         content: '';
         display: block;
         height: 0.09em;
-        min-width: 30vw;
+        min-width: 30vw; 
     }
     
     &::before {
@@ -272,8 +283,14 @@ nav ul li.dropdown:hover .dropdown-menu {
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
+.aboutText a{
+  color: #68c081;
+  font-style: italic;
+}
+
 .about p {
     font-size: 20px;
+    color:#cfcfcf;
 }
 
 .about img{
@@ -281,7 +298,273 @@ nav ul li.dropdown:hover .dropdown-menu {
     width: 500px;
 }
 
+.about button,
+.about button:after {
+  margin-top: 1em;
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  background: linear-gradient(45deg, transparent 5%, #68c081 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #0d7485;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.about button:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #68c081 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.about button:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+/* @media (min-width: 768px) {
+  .about button,
+  .about button:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+} */
+
 /* END ABOUT */
+
+/* NEWS SECTION */
+
+.newsSectionContainer {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.newsSectionContainer2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 20px;
+}
+
+.newsSection {
+  --border-radius: 0.75rem;
+  --primary-color: #ffffff;
+  --secondary-color: black;
+  width: 300px;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #68c081;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+}
+
+.newsSection img{
+  width: 100%; 
+  height: auto;
+}
+
+.newsSection > * + * {
+  margin-top: 1.1em;
+}
+
+.newsSection .card__content {
+  color: var(--secondary-color);
+  font-size: 0.86rem;
+}
+
+.newsSection .card__title {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.newsSection .card__date {
+  color: rgba(0, 0, 0, 0.801);;
+  font-size: 0.8rem;
+}
+
+.newsSection .card__arrow {
+  position: absolute;
+  background:#0d7485;
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsSection svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.newsSection:hover .card__title {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.newsSection:hover .card__arrow {
+  background: #111;
+}
+
+.newsSection:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+
+
+
+.newsSection2 {
+  --border-radius: 0.75rem;
+  --primary-color: #ffffff;
+  --secondary-color: black;
+  width: 500px;
+  height: 570px;
+  max-height: auto;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #68c081;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+}
+
+.newsSection2 img{
+  width: 100%; 
+  height: auto;
+}
+
+.newsSection2 > * + * {
+  margin-top: 1.1em;
+}
+
+.newsSection2 .card__content {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.newsSection2 .card__title {
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.newsSection2 .card__date {
+  color: rgba(0, 0, 0, 0.801);
+  font-size: 0.8rem;
+}
+
+.newsSection2 .card__arrow {
+  position: absolute;
+  background:#0d7485;
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsSection2 svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.newsSection2:hover .card__title {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.newsSection2:hover .card__arrow {
+  background: #111;
+}
+
+.newsSection2:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+
+/* FIN NEWS SECTION */
+
+
 
 /* CARDS SLIDER */
 
@@ -323,19 +606,20 @@ nav ul li.dropdown:hover .dropdown-menu {
 } 
   
 .wrapper i:last-child { 
-    right: -22px; 
-  
+    right: -22px;
 } 
   
 .wrapper .carousel { 
     display: grid; 
     grid-auto-flow: column; 
-    grid-auto-columns: calc((100% / 3) - 12px); 
-    gap: 10px; 
+    grid-auto-columns: calc((100% / 4) - 12px); 
+    gap: 20px;
     overflow-x: auto; 
     scroll-snap-type: x mandatory; 
     scroll-behavior: smooth; 
     scrollbar-width: 0; 
+    margin-left: 20px;
+    margin-right: 20px;
 } 
   
 .carousel::-webkit-scrollbar { 
@@ -359,7 +643,7 @@ nav ul li.dropdown:hover .dropdown-menu {
   
 .carousel.dragging .card { 
     cursor: grab; 
-    user-select: none; 
+    user-select: none;
 } 
   
 .carousel .card { 
@@ -375,6 +659,8 @@ nav ul li.dropdown:hover .dropdown-menu {
     align-items: center; 
     justify-content: center; 
     flex-direction: column; 
+    place-self: center;
+    margin: auto;
 } 
   
 .card .img { 
@@ -645,6 +931,30 @@ nav ul li.dropdown:hover .dropdown-menu {
     margin: 18px 0;
   }
 
+  form .input-box.success input{
+    border-color: #4070f4;
+  }
+  
+  form .input-box.error input{
+    border-color: red;
+  }
+
+  form .input-box.success textarea{
+    border-color: #4070f4;
+  }
+  
+  form .input-box.error textarea{
+    border-color: red;
+  }
+
+
+  form .input-box .error {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+  }
+
+
   form .input-box input{
     height: 100%;
     width: 100%;
@@ -659,8 +969,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     transition: all 0.3s ease;
   }
 
-  .input-box input:focus,
-  .input-box input:valid{
+  .input-box input:focus{
     border-color: #4070f4;
   }
 
@@ -668,7 +977,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     height: 100%;
     width: 100%;
     outline: none;
-    padding: 3px 15px;
+    padding: 6px 15px;
     font-size: 17px;
     font-weight: 400;
     color: #333;
@@ -715,3 +1024,14 @@ nav ul li.dropdown:hover .dropdown-menu {
     text-decoration: underline;
   }
   
+  /*Hide the arrows from a type number input Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /*Hide the arrows from a type number input Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }

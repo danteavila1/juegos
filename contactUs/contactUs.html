@@ -5,53 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Box</title>
     <link rel="stylesheet" href="../styles.css" />
-    <script src="myList.js" defer></script>
+    <script src="contactUs.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href= 
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> 
 </head>
 <body>
-    <nav>
-        <img src="../img/logo_transparent.png" alt="Blue box Logo">
-        <ul>
-            <li><a href="myList.html">MY LIST</a></li>
-            <li><a href="explore.html">EXPLORE</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li class="dropdown">
-                <a href="#">SIGN UP ↓</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">LOG IN</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+
+  <nav>
+    <a href="/index.html">
+    <img src="/img/logo_transparent.png" alt="Blue box Logo">
+    </a>
+    <ul>
+        <li><a href="/myList.html">MY LIST</a></li>
+        <li><a href="/explore.html">EXPLORE</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li class="dropdown">
+            <a href="/LogIn/LogIn.html">LOG IN ↓</a>
+            <ul class="dropdown-menu">
+                <li><a href="/singUp/signUp.html">SIGN UP</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 
     <div class="formContainer"></div>
         <div class="signUpWrapper">
             <h2>Contact Us</h2>
-            <form action="#">
+            <form id="form" action="#">
             <div class="input-box">
-                <input type="text" placeholder="Enter your name" required>
+                <input type="text" id="name" placeholder="Enter your name">
+                <div class="error"></div>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Subjet" required>
+                <input type="text" id="email" placeholder="Enter your email">
+                <div class="error"></div>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Phone Number" required>
+                <input type="number" id="phone" placeholder="Phone Number">
+                <div class="error"></div>
             </div>
             <div class="input-box">
-                <textarea placeholder="Your Message"></textarea>
+                <input type="text" id="subject" placeholder="Subjet">
+                <div class="error"></div>
             </div>
-            <div class="policy">
-                <input type="checkbox">
-                <h3>I accept all terms & condition</h3>
+            <div class="input-box">
+                <textarea id="yourMessage" placeholder="Your Message"></textarea>
+                <div class="error"></div>
             </div>
             <div class="input-box button">
-                <input type="Submit" value="Register Now">
-            </div>
-            <div class="text">
-                <h3>Already have an account? <a href="#">Login now</a></h3>
+                <input type="Submit" value="Send">
             </div>
             </form>
         </div>
@@ -77,12 +81,26 @@
           <li class="menu__item"><a class="menu__link" href="#">About</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Portfolio</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+          <li class="menu__item"><a class="menu__link" href="/contactUs/contactUs.html">Contact</a></li>
     
         </ul>
         <p>&copy;2024 Dante Avila | All Rights Reserved</p>
       </footer>
       
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Captura el formulario por su ID
+          let form = document.getElementById('form');
+      
+          // Agrega un controlador de eventos para el evento 'submit'
+          form.addEventListener('submit', function(event) {
+            // Evita que el formulario se envíe
+            event.preventDefault();
+
+            validateInputs();
+          });
+        });
+      </script>
 
 </body>
 
