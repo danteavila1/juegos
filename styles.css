@@ -974,13 +974,13 @@ nav ul li.dropdown:hover .dropdown-menu {
 
   .formContainer{
     display: flex;
-    padding-top: 8em;
+    padding-top: 10em;
   }
 
   .signUpWrapper{
     max-width: 430px;
     width: 100%;
-    background: #fff;
+    background: #ffffff;
     padding: 34px;
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
@@ -1001,7 +1001,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     height: 3px;
     width: 28px;
     border-radius: 12px;
-    background: #4070f4;
+    background: #68c081;
   }
   .signUpWrapper form{
     margin-top: 30px;
@@ -1012,7 +1012,7 @@ nav ul li.dropdown:hover .dropdown-menu {
   }
 
   form .input-box.success input{
-    border-color: #4070f4;
+    border-color: #68c081;
   }
   
   form .input-box.error input{
@@ -1020,7 +1020,7 @@ nav ul li.dropdown:hover .dropdown-menu {
   }
 
   form .input-box.success textarea{
-    border-color: #4070f4;
+    border-color: #68c081;
   }
   
   form .input-box.error textarea{
@@ -1050,7 +1050,7 @@ nav ul li.dropdown:hover .dropdown-menu {
   }
 
   .input-box input:focus{
-    border-color: #4070f4;
+    border-color: #68c081;
   }
 
   form .input-box textarea{
@@ -1068,7 +1068,7 @@ nav ul li.dropdown:hover .dropdown-menu {
   }
 
   .input-box textarea:focus{
-    border-color: #4070f4;
+    border-color: #68c081;
   }
 
   form .policy{
@@ -1085,11 +1085,11 @@ nav ul li.dropdown:hover .dropdown-menu {
     color: #fff;
     letter-spacing: 1px;
     border: none;
-    background: #4070f4;
+    background: #68c081;
     cursor: pointer;
   }
   .input-box.button input:hover{
-    background: #0e4bf1;
+    background: #459b5d;
   }
   form .text h3{
    color: #333;
@@ -1097,7 +1097,7 @@ nav ul li.dropdown:hover .dropdown-menu {
    text-align: center;
   }
   form .text h3 a{
-    color: #4070f4;
+    color: #68c081;
     text-decoration: none;
   }
   form .text h3 a:hover{
