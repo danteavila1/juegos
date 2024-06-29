@@ -779,49 +779,96 @@ nav ul li.dropdown:hover .dropdown-menu {
 
   /* EXPLORE */
 
+  .ui-input-container {
+    position: relative;
+    width: 300px;
+  }
+  
+  .ui-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #68c081;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .ui-input:focus {
+    border-color: #ffffff00;
+  }
+  
+  .ui-input-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  
+  .ui-input:focus + .ui-input-underline {
+    transform: scaleX(1);
+  }
+  
+  .ui-input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+  }
+  
+  .ui-input:focus ~ .ui-input-highlight {
+    width: 100%;
+  }
+  
+  .ui-input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #68c081;
+    transition: color 0.3s;
+  }
+  
+  .ui-input:focus ~ .ui-input-icon {
+    color: #fff;
+  }
+  
+  .ui-input-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+
   .searchWrapper {
     width: 95%;
     margin: 0 auto;
-    padding-top: 5em;
+    padding-top: 9em;
   }
 
-  .searchContainer {
-    margin: 1em 0;
-  }
 
-  .searchContainer input{
-    background-color:  transparent;
-    width: 30%;
-    border-bottom: 2px solid #000000;
-    border-radius: 5em;
-    padding: 1em 0.3em;
-  }
-
-  .searchContainer input:focus{
-    border-bottom-color: rgb(243, 4, 4) ;
-  }
-
-  .searchContainer button {
-    padding: 1em 2em;
-    margin-left: 1em;
-    background-color: #68c081;
-    color: #fff;
-    border-radius: 5em;
-    margin-top: 0.5em;
-    cursor: pointer;
+  .buttons {
+    margin-top: 1.5em;
   }
 
   .buttonValue {
     background-color: #68c081;
-    border: 2px solid #0d7485;
-    padding: 1em 2.2em;
-    border-radius: 3em;
+    border: 2px solid #0d738500;
+    padding: 0.5em 1.5em;
     color: #fff;
     cursor: pointer;
+    font-size: 13px;
+    margin-right:3px ;
   }
 
   .active {
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     color: #6a6d78;
   }
 
@@ -873,7 +920,17 @@ nav ul li.dropdown:hover .dropdown-menu {
   }
 
   .addBtn {
+    font-size: 30px;
+    background-color: #11111100;
+    border-color: #ffffff00;
+    border-radius: 50%;
+    color: #fff;
     cursor: pointer;
+  }
+
+  .addBtn:hover{
+    color: #68c081;
+    transform: scale(1.5);
   }
 
 /* FIN EXPLORE */
@@ -888,6 +945,29 @@ nav ul li.dropdown:hover .dropdown-menu {
     justify-content: center; /* Centers columns horizontally */
     align-items: center;     /* Centers items vertically */
     width: 100%;
+  }
+
+  .noGamesContainer{
+    margin-top: 2em;
+  }
+
+  .noGamesContainer img{
+    height: 400px;
+    width: 200px;
+  }
+
+  .delBtn {
+    font-size: 40px;
+    background-color: #11111100;
+    border-color: #ffffff00;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .delBtn:hover{
+    color: #68c081;
+    transform: scale(1.5);
   }
 
   /* SIGN UP */

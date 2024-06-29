@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function loadGames() {
         let selectedGames = JSON.parse(localStorage.getItem('selectedGames')) || [];
         if (selectedGames.length === 0) {
-            console.error('No game data found in local storage.');
+            noGamesMessage();
             return;
         }
 
@@ -59,6 +59,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
             myList.removeChild(myList.firstChild);
         }
         loadGames();
+    }
+
+    function noGamesMessage(){
+        console.error('No game data found in local storage.');
+        myList = document.getElementById('myListContainer');
+
+        let imgContainer = document.createElement('div');
+        imgContainer.classList.add("noGamesContainer");
+        let image = document.createElement('img');
+        image.setAttribute("src", '/img/nog2.png');
+        imgContainer.appendChild(image);
+
+        myList.appendChild(imgContainer);
     }
 
     loadGames();
