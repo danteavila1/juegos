@@ -61,19 +61,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         loadGames();
     }
 
-    function noGamesMessage(){
-        console.error('No game data found in local storage.');
-        myList = document.getElementById('myListContainer');
-
-        let imgContainer = document.createElement('div');
-        imgContainer.classList.add("noGamesContainer");
-        let image = document.createElement('img');
-        image.setAttribute("src", '/img/nog2.png');
-        imgContainer.appendChild(image);
-
-        myList.appendChild(imgContainer);
-    }
-
     loadGames();
 });
 
@@ -92,23 +79,57 @@ function filterGame(value){
 
     //select all cards
     let elements = document.querySelectorAll(".card");
+    let noGamesContainer = document.querySelector('.noGamesContainer');
+
+    if (noGamesContainer) {
+        noGamesContainer.remove(); // Remove any existing noGamesContainer
+    }
+
+    let noGames = true;
     //loop through all cards
     elements.forEach(element => {
+        if(noGamesContainer){
+            noGamesContainer.classList.add("hide");
+        }
         //display all cards on 'all' btn click
         if(value == "all"){
             element.classList.remove("hide");
+            noGames = false;
         } else{
             //check if element contains category
             if(element.classList.contains(value.toUpperCase())){
                 //display element based on category
                 element.classList.remove("hide");
+                noGames= false;
             }
             else{
                 //hide the others elements
+                if(noGamesContainer){
+                    noGamesContainer.classList.add("hide");
+                }
                 element.classList.add("hide");
             }
         }
+
     });
+    
+    if(noGames==true){
+        noGamesMessage();
+    }
+    
+}
+
+function noGamesMessage(){
+    console.error('No game data found in local storage.');
+    myList = document.getElementById('myListContainer');
+
+    let imgContainer = document.createElement('div');
+    imgContainer.classList.add("noGamesContainer");
+    let image = document.createElement('img');
+    image.setAttribute("src", '/img/nog2.png');
+    imgContainer.appendChild(image);
+
+    myList.appendChild(imgContainer);
 }
 
 

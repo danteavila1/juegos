@@ -65,8 +65,11 @@ function loadExploreGames(){
 
         let addBtn = document.createElement('button');
         addBtn.classList.add('addBtn');
-        addBtn.onclick = () => addGame(game.id);
         addBtn.innerText = "+";
+        addBtn.onclick = () => {
+            addGame(game.id);
+            addBtnEffect(addBtn);
+        };
 
         nameSubContainer.appendChild(category);
         nameContainer.appendChild(nameSubContainer);
@@ -75,6 +78,20 @@ function loadExploreGames(){
         card.appendChild(nameContainer);
         gamesContainer.appendChild(card);
     }
+}
+
+function addBtnEffect(button) {
+    // Remove the effect from all buttons first
+    let buttons = document.querySelectorAll('.addBtn');
+    buttons.forEach(btn => btn.classList.remove('hoverEffect'));
+
+    // Add the effect to the clicked button
+    button.classList.add('hoverEffect');
+
+     // Remove the hover effect after a delay (e.g., 0.3 seconds)
+     setTimeout(() => {
+        button.classList.remove('hoverEffect');
+    }, 200);
 }
 
 //parameter passed from button

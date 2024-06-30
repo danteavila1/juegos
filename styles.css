@@ -898,6 +898,12 @@ nav ul li.dropdown:hover .dropdown-menu {
     text-align: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+  }
+
+  .card:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
   }
 
   .imageContainer img{
@@ -917,6 +923,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     font-weight: 500;
     font-size: large;
     padding-bottom: 0.5em;
+    cursor: pointer;
   }
 
   .addBtn {
@@ -926,12 +933,21 @@ nav ul li.dropdown:hover .dropdown-menu {
     border-radius: 50%;
     color: #fff;
     cursor: pointer;
+    transition: transform 0.3s;
   }
 
   .addBtn:hover{
     color: #68c081;
     transform: scale(1.5);
   }
+
+  .addBtn.hoverEffect {
+    transform: scale(2);
+    color: #ff0000;
+  }
+  .addBtn:not(.hoverEffect) {
+    transform: scale(1);
+  } 
 
 /* FIN EXPLORE */
 
