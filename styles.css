@@ -179,7 +179,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .sliderText p{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 35px;
 }
 
@@ -714,13 +714,14 @@ nav ul li.dropdown:hover .dropdown-menu {
     font-weight: 500; 
     font-size: 1.56rem; 
     margin: 30px 0 5px; 
-    color:#68c081
+    color: #68c081;
+    text-align: center;
 } 
   
 .card span { 
     color: #6a6d78; 
     font-size: 1.31rem; 
-  
+    text-align: center;
 } 
   
 /* @media screen and (max-width: 900px) { 
