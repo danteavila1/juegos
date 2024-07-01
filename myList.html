@@ -6,6 +6,7 @@
     <title>Blue Box</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="myList.js" defer></script>
+    <script type="text/javascript" src="/toTop.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href= 
@@ -27,6 +28,9 @@
                 </ul>
             </li>
         </ul>
+        <a href="#" class="toTop">
+          <i class="fas fa-chevron-up"></i> 
+        </a>
     </nav>
 
     <div class="searchWrapper">
@@ -55,11 +59,12 @@
         </div>
 
         <div class="buttons">
-            <button class="buttonValue" onclick="filterGame('all')">All</button>
-            <button class="buttonValue" onclick="filterGame('fps')">FPS</button>
-            <button class="buttonValue" onclick="filterGame('rpg')">RPG</button>
-            <button class="buttonValue" onclick="filterGame('mmorpg')">MMORPG</button>
-            <button class="buttonValue" onclick="filterGame('arpg')">MOBA</button>
+          <button class="buttonValue" onclick="filterGame('all')">ALL</button>
+          <button class="buttonValue" onclick="filterGame('fps')">FPS</button>
+          <button class="buttonValue" onclick="filterGame('rpg')">RPG</button>
+          <button class="buttonValue" onclick="filterGame('coop')">COOP</button>
+          <button class="buttonValue" onclick="filterGame('mmorpg')">MMORPG</button>
+          <button class="buttonValue" onclick="filterGame('moba')">MOBA</button>
         </div>
         <div id="myListContainer"></div>
     </div>
