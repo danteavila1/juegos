@@ -65,71 +65,83 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 //parameter passed from button
-function filterGame(value){
+let selectedCategories = [];
+
+function toggleCategory(value) {
+    if (value === "all") {
+        selectedCategories = ["all"];
+    } else {
+        const index = selectedCategories.indexOf(value);
+        if (index > -1) {
+            selectedCategories.splice(index, 1);
+        } else {
+            selectedCategories.push(value);
+            selectedCategories = selectedCategories.filter(cat => cat !== "all");
+        }
+    }
+    updateActiveButtons();
+    filterGames();
+}
+
+function updateActiveButtons() {
     let buttons = document.querySelectorAll(".buttonValue");
     buttons.forEach(button => {
-        //check if value equals innetText
-        if(value.toUpperCase() == button.innerText.toUpperCase()){
+        if (selectedCategories.includes(button.innerText.toLowerCase())) {
             button.classList.add("active");
-        }
-        else{
+        } else {
             button.classList.remove("active");
         }
-    })
+    });
+}
 
-    //select all cards
+
+
+function filterGames() {
     let elements = document.querySelectorAll(".card");
     let noGamesContainer = document.querySelector('.noGamesContainer');
 
+    // Remove any existing noGamesContainer
     if (noGamesContainer) {
-        noGamesContainer.remove(); // Remove any existing noGamesContainer
+        noGamesContainer.remove();
     }
 
     let noGames = true;
-    //loop through all cards
+
     elements.forEach(element => {
-        if(noGamesContainer){
-            noGamesContainer.classList.add("hide");
-        }
-        //display all cards on 'all' btn click
-        if(value == "all"){
+        if (selectedCategories.includes("all")) {
             element.classList.remove("hide");
             noGames = false;
-        } else{
-            //check if element contains category
-            if(element.classList.contains(value.toUpperCase())){
-                //display element based on category
-                element.classList.remove("hide");
-                noGames= false;
-            }
-            else{
-                //hide the others elements
-                if(noGamesContainer){
-                    noGamesContainer.classList.add("hide");
+        } else {
+            let show = false;
+            for (let category of selectedCategories) {
+                if (element.classList.contains(category.toUpperCase())) {
+                    show = true;
+                    break;
                 }
+            }
+            if (show) {
+                element.classList.remove("hide");
+                noGames = false;
+            } else {
                 element.classList.add("hide");
             }
         }
-
     });
-    
-    if(noGames==true){
+
+    if (noGames) {
         noGamesMessage();
     }
-    
 }
 
-function noGamesMessage(){
-    console.error('No game data found in local storage.');
-    myList = document.getElementById('myListContainer');
-
+function noGamesMessage() {
+    let gamesContainer = document.getElementById('myListContainer');
     let imgContainer = document.createElement('div');
     imgContainer.classList.add("noGamesContainer");
     let image = document.createElement('img');
     image.setAttribute("src", '/img/nog2.png');
     imgContainer.appendChild(image);
 
-    myList.appendChild(imgContainer);
+    gamesContainer.appendChild(imgContainer);
 }
 
 
@@ -138,6 +150,12 @@ document.getElementById('search').addEventListener("click", () => {
     let searchInput = document.getElementById('searchInput').value;
     let elements = document.querySelectorAll(".gameName");
     let cards = document.querySelectorAll(".card");
+    let noGamesContainer = document.querySelector('.noGamesContainer');
+
+    // Remove any existing noGamesContainer
+    if (noGamesContainer) {
+        noGamesContainer.remove();
+    }
     //loop through all elements
     elements.forEach((element, index) =>{
         if(element.innerText.includes(searchInput.toUpperCase())){
